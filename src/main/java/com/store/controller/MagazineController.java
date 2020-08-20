@@ -3,6 +3,7 @@ package com.store.controller;
 
 import com.store.model.Magazine;
 
+import com.store.model.Product;
 import com.store.repository.MagazineRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,19 +19,15 @@ import java.util.List;
 @RequestMapping("/api")
 public class MagazineController {
 
-    private List<Magazine> magazines;
+
 
     public MagazineController() {
-//        magazines = new ArrayList<>();
-//        magazines.add(new Magazine("owoce"));
-    }@Autowired
+
+    }
+
+    @Autowired
     MagazineRepository magazineRepository;
 
-
-//    @GetMapping("/magazine")
-//    public List<Magazine> getMagazine() {
-//        return magazines;
-//    }
 
     @GetMapping("/a")
     public ResponseEntity<String> getA() {
@@ -42,4 +39,6 @@ public class MagazineController {
     {
         return this.magazineRepository.findAll();
     }
+
+
 }

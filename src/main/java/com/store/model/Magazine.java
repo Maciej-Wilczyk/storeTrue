@@ -9,33 +9,32 @@ import javax.persistence.*;
 @Service
 public class Magazine {
     @Id
+    @Column(name = "magazine_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int magazine_id;
 
-    @Column(name = "name")
-    private String nameM;
+    @Column(name = "magazine_name")
+    private String magazine_name;
 
     public Magazine() {
 
     }
 
-    public Magazine(String name) {
-        this.nameM = name;
+
+
+    public int getMagazine_id() {
+        return magazine_id;
     }
 
-    public long getId() {
-        return id;
+    public void setMagazine_id(int magazine_id) {
+        this.magazine_id = magazine_id;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public String getMagazine_name() {
+        return magazine_name;
     }
 
-    public String getNameM() {
-        return nameM;
-    }
-
-    public void setNameM(String name) {
-        this.nameM = name;
+    public void setMagazine_name(String magazine_name) {
+        this.magazine_name = magazine_name;
     }
 }
