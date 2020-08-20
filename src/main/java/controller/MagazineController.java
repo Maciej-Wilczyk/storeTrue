@@ -4,6 +4,8 @@ package controller;
 import model.Magazine;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,8 +31,8 @@ public class MagazineController {
     }
 
     @GetMapping("/a")
-    public String getA() {
-        return "aaa";
+    public ResponseEntity<String> getA() {
+        return new ResponseEntity<String>("aa",HttpStatus.OK);
     }
 
 //    @GetMapping("/magazine")
