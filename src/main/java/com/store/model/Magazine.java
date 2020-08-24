@@ -21,7 +21,6 @@ public class Magazine {
     }
 
 
-
     public int getMagazine_id() {
         return magazine_id;
     }
